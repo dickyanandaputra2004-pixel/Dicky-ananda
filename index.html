@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dicky Ananda - Peta</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
+    <style>
+        body { margin:0; font-family: Arial; }
+        #judul { background: green; color:white; text-align:center; padding:10px; }
+        #map { height: 90vh; }
+    </style>
+</head>
+<body>
+
+<div id="judul">Dicky Ananda - Peta Kampus</div>
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+<script>
+var map = L.map('map').setView([-7.7625,110.4089],16);
+
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(map);
+
+L.marker([-7.7625,110.4089]).addTo(map).bindPopup("Gedung Utama").openPopup();
+L.marker([-7.7630,110.4095]).addTo(map).bindPopup("Lab");
+
+</script>
+
+</body>
+</html>
